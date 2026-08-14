@@ -1,0 +1,3 @@
+admin@yahoo.com
+adminpassword
+Hashed password: $2a$10$wpMLotwAFlyMAY5Q5YqCBuMZ4iH/ClC6SBzu9bxeb3RUzqiKhkgUC
