@@ -1,0 +1,235 @@
+/* About Us Page CSS */
+/* Using Montserrat font and consistent theme */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+:root {
+  --about-bg-primary: #121212;
+  --about-text-primary: #f5f5f5;
+  --about-accent-color: #ff3131; /* Horror red */
+  --about-secondary-bg: #1a1a1a;
+  --about-hero-gold: #ffd700; /* Hero gold */
+  --about-shadow-color: rgba(255, 0, 0, 0.2);
+}
+
+.about-us-container {
+  background-color: var(--about-bg-primary);
+  color: var(--about-text-primary);
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.about-us-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(229, 9, 20, 0.1), rgba(18, 18, 18, 0.9));
+  z-index: -1;
+}
+
+.about-us-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* Hero Section */
+.about-hero-section {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.about-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/parallax-bg.jpg') no-repeat center center; /* Replace with your image path */
+  background-size: cover;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.about-hero-text {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  background: rgba(18, 18, 18, 0.8);
+  border-radius: 12px;
+}
+
+.about-hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.about-hero-text .hero {
+  font-family: "Russo One", sans-serif;
+  color: var(--about-hero-gold);
+  font-size: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.about-hero-text .hero:hover {
+  transform: scale(1.1);
+}
+
+.about-hero-text .fear {
+  font-family: "Creepster", cursive;
+  color: var(--about-accent-color);
+  font-size: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.about-hero-text .fear:hover {
+  transform: scale(1.1);
+}
+
+.about-hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Story Section */
+.about-story-section {
+  margin-bottom: 60px;
+}
+
+.about-section-title {
+  font-size: 1.8rem;
+  color: var(--about-accent-color);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--about-accent-color);
+  padding-bottom: 10px;
+  display: inline-block;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-story-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mission Section */
+.about-mission-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.about-mission-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.about-shop-btn {
+  padding: 12px 24px;
+  background-color: var(--about-accent-color);
+  color: var(--about-text-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.about-shop-btn:hover {
+  background-color: var(--about-hero-gold);
+  color: var(--about-bg-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--about-shadow-color);
+}
+
+/* Team Section */
+.about-team-section {
+  margin-bottom: 60px;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.about-team-member {
+  text-align: center;
+  padding: 20px;
+  background: var(--about-secondary-bg);
+  border-radius: 12px;
+  border: 1px solid var(--about-accent-color);
+  transition: transform 0.3s ease;
+}
+
+.about-team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--about-shadow-color);
+}
+
+.about-team-image {
+  width: 150px;
+  height: 150px;
+  background: url('../images/parallax-bg.jpg') no-repeat center center; /* Replace with actual images */
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  border: 2px solid var(--about-accent-color);
+}
+
+.about-team-member h3 {
+  font-size: 1.2rem;
+  color: var(--about-text-primary);
+  margin-bottom: 5px;
+}
+
+.about-team-member p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us-content {
+    padding: 16px;
+  }
+
+  .about-hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero-text .hero,
+  .about-hero-text .fear {
+    font-size: 2.5rem;
+  }
+
+  .about-hero-text p {
+    font-size: 1rem;
+  }
+
+  .about-section-title {
+    font-size: 1.5rem;
+  }
+}
