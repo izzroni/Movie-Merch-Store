@@ -1,0 +1,46 @@
+.edit-item {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .current-img {
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .update-button {
+    width: 100%;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
