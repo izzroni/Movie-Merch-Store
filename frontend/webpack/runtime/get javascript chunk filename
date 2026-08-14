@@ -1,0 +1,5 @@
+// This function allow to reference async chunks
+__webpack_require__.u = (chunkId) => {
+	// return url for filenames based on template
+	return "static/js/" + chunkId + "." + {"239":"dfdb0d71","455":"c3314a56","488":"7213179a","977":"d75cf9f7"}[chunkId] + ".chunk.js";
+};
