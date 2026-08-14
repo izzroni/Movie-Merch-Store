@@ -1,0 +1,52 @@
+.add-item-container {
+  width: 50%;
+  margin: auto;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.add-item-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-item-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.add-item-form input,
+.add-item-form select,
+.add-item-form textarea {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.add-item-form input,
+.add-item-form select {
+  height: 35px;
+}
+
+.add-item-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.add-item-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-item-form button:hover {
+  background: darkred;
+}
