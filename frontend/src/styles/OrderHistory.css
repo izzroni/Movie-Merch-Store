@@ -1,0 +1,344 @@
+/* OrderHistory.css */
+:root {
+  --oh-bg-primary: #1a1a1a; /* Slightly lighter than #121212 */
+  --oh-text-primary: #ffffff; /* Matches login */
+  --oh-accent-color: #e50914; /* Matches login */
+  --oh-secondary-bg: #242424; /* Slightly lighter than #1e1e1e */
+  --oh-border-color: #444444; /* Softer than #333333 */
+  --oh-success-color: #28a745; /* Consistent with previous */
+}
+
+.order-history-container {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--oh-bg-primary);
+  min-height: 100vh;
+  padding: 32px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-history-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(229, 9, 20, 0.1), rgba(18, 18, 18, 0.9)); /* Matches login */
+  z-index: -1;
+}
+
+.order-history-container h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--oh-accent-color);
+  text-shadow: 2px 2px 10px rgba(229, 9, 20, 0.5); /* Matches login shadow */
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.orders-table {
+  width: 100%;
+  max-width: 1000px;
+  background-color: var(--oh-secondary-bg);
+  border: 2px solid var(--oh-accent-color);
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(229, 9, 20, 0.3); /* Matches login */
+  overflow: hidden;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--oh-border-color);
+  color: var(--oh-text-primary);
+}
+
+.orders-table th {
+  background-color: #2a2a2a; /* Slightly lighter header */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.orders-table tr:hover {
+  background-color: rgba(229, 9, 20, 0.1); /* Subtle red hover like login */
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: var(--oh-accent-color);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.expand-btn:hover {
+  color: #c20812; /* Matches login hover */
+}
+
+.order-items-row {
+  background-color: #2a2a2a; /* Matches table header */
+}
+
+.order-items {
+  padding: 1rem;
+}
+
+.order-items h4 {
+  color: var(--oh-accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.order-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.order-items li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--oh-border-color);
+  color: var(--oh-text-primary);
+}
+
+.order-items li:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.item-quantity {
+  color: #d0d0d0; /* Softer gray for secondary text */
+  margin-left: 5px;
+}
+
+.item-price {
+  color: var(--oh-accent-color);
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.status-badge.pending {
+  background-color: #ffcc00; /* Yellow for pending */
+  color: #333333; /* Dark text for contrast */
+}
+
+.status-badge.delivered {
+  background-color: var(--oh-success-color);
+}
+
+.track-btn {
+  background: none;
+  border: none;
+  color: var(--oh-accent-color);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.track-btn:hover {
+  color: #c20812;
+}
+
+.reorder-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: var(--oh-success-color);
+  color: var(--oh-text-primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.reorder-btn:hover {
+  background-color: var(--oh-accent-color);
+}
+
+.no-orders {
+  text-align: center;
+  color: #d0d0d0; /* Matches login secondary text */
+  font-size: 1.2rem;
+  padding: 40px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid transparent;
+  border-top: 4px solid var(--oh-accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-container {
+  background-color: rgba(229, 9, 20, 0.2);
+  border: 1px solid var(--oh-accent-color);
+  color: #ff6161; /* Softer red like login */
+  padding: 12px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.error-container button {
+  background-color: var(--oh-accent-color);
+  color: var(--oh-text-primary);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.error-container button:hover {
+  background-color: #c20812;
+}
+
+/* Feedback Form */
+.feedback-form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 300px;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 60px;
+  padding: 5px;
+  background-color: #333333; /* Matches login input */
+  color: var(--oh-text-primary);
+  border: 1px solid var(--oh-border-color);
+  border-radius: 5px;
+}
+
+.feedback-form button {
+  padding: 5px 10px;
+  background-color: var(--oh-success-color);
+  color: var(--oh-text-primary);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.feedback-form button:hover {
+  background-color: #218838;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #cccccc; /* Gray for empty stars */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.star.filled {
+  color: #ffcc00; /* Yellow for filled stars */
+}
+
+.star:hover,
+.star.filled:hover {
+  color: #ff9900; /* Orange on hover */
+}
+
+.existing-feedback {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #2a2a2a; /* Matches table header */
+  border-radius: 5px;
+  color: var(--oh-text-primary);
+}
+
+.existing-feedback p {
+  margin: 5px 0;
+}
+
+.feedback-pending {
+  margin-top: 10px;
+  color: #7f8c8d; /* Matches login secondary text */
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-table {
+    font-size: 0.9rem;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 0.8rem;
+  }
+
+  .order-history-container {
+    padding: 20px;
+  }
+
+  .order-items {
+    padding: 0.8rem;
+  }
+}
+
+/* Download Bill Button */
+.download-bill-btn {
+  background: none;
+  border: none;
+  color: var(--oh-success-color); /* Green to differentiate from Track's red */
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  margin-left: 10px; /* Space it from the Track button */
+}
+
+.download-bill-btn:hover {
+  color: #218838; /* Darker green on hover */
+}
