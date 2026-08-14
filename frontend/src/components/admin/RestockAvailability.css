@@ -1,0 +1,182 @@
+.restock-availability {
+    padding: 0 15px;
+  }
+  
+  .restock-availability h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e6e9ed;
+    padding-bottom: 15px;
+  }
+  
+  .restock-table-container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .restock-table-container h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .restock-table-responsive {
+    overflow-x: auto;
+  }
+  
+  .restock-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+  
+  .restock-table th,
+  .restock-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    color: black !important;
+  }
+  
+  .restock-table th {
+    background-color: #f5f7fa;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .restock-table tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .restock-table td:nth-child(6) {
+    max-width: 200px; /* Sizes column */
+    word-wrap: break-word;
+  }
+  
+  .restock-table td:nth-child(8) {
+    max-width: 150px; /* Expiry Date column */
+    word-wrap: break-word;
+  }
+  
+  .restock-table button,
+  .edit-form button {
+    background-color: #e67e22;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .restock-table button:hover,
+  .edit-form button:hover {
+    background-color: #d35400;
+  }
+  
+  .restock-table .delete-btn,
+  .edit-form .delete-btn {
+    background-color: #e74c3c;
+  }
+  
+  .restock-table .delete-btn:hover,
+  .edit-form .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .edit-form {
+    margin-top: 20px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .edit-form label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-size: 14px;
+    display: block;
+  }
+  
+  .edit-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .edit-form input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    outline: none;
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+  }
+  
+  .form-actions button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-actions button:first-child {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .form-actions button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .restock-no-data {
+    text-align: center;
+    padding: 30px;
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  
+  .restock-success-message,
+  .restock-error-message {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .restock-success-message {
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #27ae60;
+    border-left: 4px solid #2ecc71;
+  }
+  
+  .restock-error-message {
+    background-color: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+    border-left: 4px solid #e74c3c;
+  }
+  
+  @media (max-width: 768px) {
+    .restock-table-container {
+      padding: 20px 15px;
+    }
+  }
