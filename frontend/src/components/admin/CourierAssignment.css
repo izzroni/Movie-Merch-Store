@@ -1,0 +1,191 @@
+/* Courier Assignment Styles */
+.cassign-management-container {
+  padding: 0 15px;
+}
+
+.cassign-management-container h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #e6e9ed;
+  padding-bottom: 15px;
+}
+
+.cassign-form {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.cassign-form h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cassign-input-group {
+  max-width: 300px;
+}
+
+.cassign-input-group label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #34495e;
+  font-size: 14px;
+  display: block;
+}
+
+.cassign-input-group select {
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.cassign-input-group select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  outline: none;
+}
+
+.cassign-error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.cassign-table-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.cassign-table-container h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cassign-table-responsive {
+  overflow-x: auto;
+}
+
+.cassign-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.cassign-table th,
+.cassign-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  color: black !important;
+}
+
+.cassign-table th {
+  background-color: #f5f7fa;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cassign-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.cassign-status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.cassign-status-badge.pending {
+  background-color: rgba(255, 204, 0, 0.15);
+  color: #e67e22;
+}
+
+.cassign-status-badge.assigned {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+}
+
+.cassign-action-btn {
+  background-color: #e67e22;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cassign-action-btn:hover {
+  background-color: #d35400;
+}
+
+.cassign-delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cassign-delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.cassign-no-data {
+  text-align: center;
+  padding: 30px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.cassign-success-message,
+.cassign-error-message {
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cassign-success-message {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+  border-left: 4px solid #2ecc71;
+}
+
+.cassign-error-message {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  border-left: 4px solid #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .cassign-table-container {
+    padding: 20px 15px;
+  }
+}
