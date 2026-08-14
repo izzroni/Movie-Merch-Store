@@ -1,0 +1,205 @@
+/* Categories Page CSS with unique cat- prefix */
+:root {
+  --cat-bg-primary: #121212;
+  --cat-secondary-bg: #1a1a1a;
+  --cat-text-color: #ffffff;
+  --cat-accent-color: #e50914;
+  --cat-hover-color: #ff4040;
+  --cat-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+  --cat-transition: all 0.4s ease;
+  --navbar-height: 80px;
+}
+
+.categories-wrapper {
+  background: var(--cat-bg-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-container {
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(18, 18, 18, 0.9));
+  color: var(--cat-text-color);
+  font-family: "Montserrat", sans-serif;
+  padding: calc(1.5rem + var(--navbar-height)) 1.5rem 3rem;
+  text-align: center;
+  position: relative;
+  flex: 1;
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.cat-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(229, 9, 20, 0.1) 0%, rgba(18, 18, 18, 0.9) 70%);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.cat-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.cat-category-card {
+  background: var(--cat-secondary-bg);
+  border: 2px solid var(--cat-accent-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--cat-transition);
+  padding: 1.2rem;
+  box-shadow: var(--cat-shadow);
+  text-align: left;
+  width: 100%;
+  max-width: 320px;
+}
+
+.cat-category-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(229, 9, 20, 0.3);
+  border-color: var(--cat-hover-color);
+}
+
+.cat-category-clickable {
+  cursor: pointer;
+  padding: 0.75rem;
+  border-bottom: 2px solid #333333;
+  transition: var(--cat-transition);
+}
+
+.cat-category-clickable:focus {
+  outline: 2px solid var(--cat-hover-color);
+  outline-offset: 2px;
+}
+
+.cat-category-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--cat-text-color);
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color var(--cat-transition);
+}
+
+.cat-category-clickable:hover .cat-category-name,
+.cat-category-clickable:focus .cat-category-name {
+  color: var(--cat-hover-color);
+}
+
+.cat-subcategories-list {
+  padding: 0.75rem 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.cat-subcategory-item {
+  font-size: 0.95rem;
+  color: #cccccc;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: var(--cat-transition);
+  border-radius: 4px;
+}
+
+.cat-subcategory-item:hover,
+.cat-subcategory-item:focus {
+  color: var(--cat-hover-color);
+  background: rgba(229, 9, 20, 0.15);
+  transform: translateX(8px);
+}
+
+.cat-subcategory-item:focus {
+  outline: 2px solid var(--cat-hover-color);
+  outline-offset: 2px;
+}
+
+.cat-no-subcategories {
+  font-size: 0.95rem;
+  color: #999999;
+  padding: 0.4rem 0.75rem;
+  text-align: center;
+}
+
+.cat-no-results {
+  font-size: 1.3rem;
+  color: #999999;
+  margin-top: 1.5rem;
+  grid-column: 1 / -1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cat-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: var(--cat-text-color);
+}
+
+.cat-spinner {
+  border: 4px solid transparent;
+  border-top: 4px solid var(--cat-accent-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: catSpin 1.2s ease-in-out infinite;
+}
+
+.cat-retry-button {
+  background: none;
+  border: none;
+  color: #e50914;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  transition: color 0.4s ease;
+}
+
+.cat-retry-button:hover {
+  color: #ff4040;
+}
+
+@keyframes catSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .cat-categories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  .cat-container {
+    padding: calc(1rem + var(--navbar-height)) 1rem 2rem;
+  }
+
+  .cat-category-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cat-container {
+    padding: calc(0.5rem + var(--navbar-height)) 0.5rem 1rem;
+  }
+
+  .cat-category-card {
+    padding: 1rem;
+  }
+}
