@@ -1,0 +1,101 @@
+.manage-items {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.manage-items h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller cards */
+  gap: 15px;
+  justify-content: center;
+}
+
+.item-card {
+  background: #1a1a1a;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 3px 8px rgba(255, 0, 0, 0.4);
+  transition: transform 0.2s ease-in-out;
+  max-width: 220px; /* Limit the size */
+  margin: auto;
+}
+
+.item-card:hover {
+  transform: scale(1.03);
+}
+
+.item-image img {
+  width: 100%;
+  height: 120px; /* Reduce height */
+  object-fit: contain; /* Prevent cropping */
+  border-radius: 4px;
+  background: #222; /* Dark background for contrast */
+}
+
+.item-details h3 {
+  font-size: 16px; /* Reduce title size */
+  margin: 8px 0;
+}
+
+.item-description {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 6px;
+  white-space: normal; /* Allow text to wrap */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show max 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+.item-details p {
+  font-size: 12px;
+  white-space: normal; /* Prevent text from staying in one line */
+  word-wrap: break-word; /* Ensure text wraps properly */
+}
+
+.item-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-evenly; /* Space out buttons */
+  gap: 10px; /* More space between buttons */
+}
+
+
+.edit-button,
+.delete-button {
+  padding: 6px 10px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.edit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
